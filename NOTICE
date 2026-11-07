@@ -1,0 +1,22 @@
+steamledger
+Copyright 2026 abel0x <https://github.com/abel0x>
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+All original source code, documentation and artwork in this repository are the
+copyright of abel0x.
+
+This product does not bundle or link any third-party code. It runs on the Python
+standard library alone, and the static site it builds uses no external scripts,
+fonts or stylesheets.
+
+Steam and the Steam logo are trademarks and/or registered trademarks of Valve
+Corporation in the U.S. and/or other countries. This project is not affiliated
+with, sponsored or endorsed by Valve. Data is retrieved through the Steam Web API
+and its use is subject to the Steam Web API Terms of Use:
+
+    https://steamcommunity.com/dev/apiterms

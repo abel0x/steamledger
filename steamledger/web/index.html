@@ -1,0 +1,58 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<!-- Copyright 2026 abel0x <https://github.com/abel0x> -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<meta name="generator" content="steamledger">
+<title>steamledger</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/app.css">
+<script>
+  (function () {
+    try {
+      var theme = localStorage.getItem("steamledger.theme");
+      if (theme === "light" || theme === "dark") document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) { /* storage blocked: follow the system theme */ }
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="web.skip">Skip to content</a>
+<header class="top">
+  <div class="top-inner">
+    <a class="who" href="#/" id="who"></a>
+    <div class="controls">
+      <label class="control">
+        <span data-i18n="web.controls.language">Language</span>
+        <select id="lang"></select>
+      </label>
+      <label class="control">
+        <span data-i18n="web.controls.theme">Theme</span>
+        <select id="theme">
+          <option value="auto" data-i18n="web.controls.theme_auto">System</option>
+          <option value="light" data-i18n="web.controls.theme_light">Light</option>
+          <option value="dark" data-i18n="web.controls.theme_dark">Dark</option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="rail-wrap">
+    <div class="rail" id="rail"></div>
+  </div>
+  <nav class="tabs" id="tabs" aria-label="Sections"></nav>
+</header>
+<main id="main" tabindex="-1"></main>
+<footer class="foot" id="foot"></footer>
+<div class="tip" id="tip" role="tooltip" hidden></div>
+<noscript><p class="noscript">This page needs JavaScript. The same data is in the database folder as JSON, CSV and HTML files.</p></noscript>
+<script src="assets/i18n.js"></script>
+<script src="data/index.js"></script>
+<script src="assets/diff.js"></script>
+<script src="assets/charts.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

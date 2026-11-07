@@ -1,0 +1,10 @@
+# Text files are stored with LF. Windows batch and PowerShell files keep CRLF,
+# cmd.exe misreads labels and line continuations in LF-only batch files.
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+*.png binary
+*.jpg binary
+*.ico binary

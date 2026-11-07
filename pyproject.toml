@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "steamledger"
+dynamic = ["version"]
+description = "Archive your Steam profile, library, achievements and friends into an offline database and browse it as a static site."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "abel0x" }]
+requires-python = ">=3.10"
+dependencies = []
+keywords = ["steam", "steam-web-api", "achievements", "playtime", "archive", "static-site"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Natural Language :: English",
+    "Natural Language :: Turkish",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Games/Entertainment",
+]
+
+[project.urls]
+Homepage = "https://github.com/abel0x/steamledger"
+Issues = "https://github.com/abel0x/steamledger/issues"
+Changelog = "https://github.com/abel0x/steamledger/blob/main/CHANGELOG.md"
+
+[project.scripts]
+steamledger = "steamledger.cli:main"
+
+[tool.setuptools]
+packages = ["steamledger"]
+
+[tool.setuptools.dynamic]
+version = { attr = "steamledger.__version__" }
+
+[tool.setuptools.package-data]
+steamledger = ["locales/*.json", "web/*.html", "web/*.svg", "web/assets/*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "UP", "I", "SIM"]
+# Line length is left to `ruff format`; generated HTML and CSS stay on one line.
+ignore = ["E501"]
